@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../normalize.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+  <body class="body">
     <h1 class="visually-hidden">Cozy House: Our Pets</h1>
     <header class="header sticky center">
       <a class="logo-link" href="../main/index.html">
@@ -18,18 +18,46 @@
         </div>
       </a>
 
+      <div class="shadow"></div>
+
       <nav class="menu">
-        <a class="menu__link" href="../../pages/main/index.html"
-          >About the shelter</a
-        >
-        <a class="menu__link menu__link_active" href="../pets/index.html"
-          >Our pets</a
-        >
-        <a class="menu__link" href="../../pages/main/index.html#help"
-          >Help the shelter</a
-        >
-        <a class="menu__link" href="#contacts">Contacts</a>
+        <a class="logo-link logo-link_mobile" href="../main/index.html">
+          <div class="logo-container">
+            <p class="logo_title">Cozy House</p>
+            <p class="logo_subtitle">Shelter for pets in Boston</p>
+          </div>
+        </a>
+
+        <ul class="menu-list">
+          <li class="menu-link">
+            <a class="menu__link" href="../../pages/main/index.html">
+              About the shelter
+            </a>
+          </li>
+          <li class="menu-link">
+            <a class="menu__link menu__link_active" href="../pets/index.html">
+              Our pets
+            </a>
+          </li>
+          <li class="menu-link">
+            <a class="menu__link" href="../../pages/main/index.html#help">
+              Help the shelter
+            </a>
+          </li>
+          <li class="menu-link">
+            <a class="menu__link" href="#contacts">Contacts</a>
+          </li>
+        </ul>
       </nav>
+
+      <!-- menu-mobile -->
+      <div class="btn-mobile-nav">
+        <img
+          src="../../assets/icons/burger-black.svg"
+          alt="menu"
+          name="menu-outline"
+        />
+      </div>
     </header>
 
     <main>
@@ -66,7 +94,7 @@
             <p class="pets__card_name">Woody</p>
             <button class="button-light">Learn more</button>
           </div>
-          <div class="pets__card">
+          <div class="pets__card pets__card_mobile-hidden">
             <img
               src="../../assets/img/pets-sophia.png"
               alt="Dog Sophia"
@@ -75,7 +103,7 @@
             <p class="pets__card_name">Sophia</p>
             <button class="button-light">Learn more</button>
           </div>
-          <div class="pets__card">
+          <div class="pets__card pets__card_mobile-hidden">
             <img
               src="../../assets/img/pets-timmy.png"
               alt="Cat Timmy"
@@ -84,7 +112,7 @@
             <p class="pets__card_name">Timmy</p>
             <button class="button-light">Learn more</button>
           </div>
-          <div class="pets__card">
+          <div class="pets__card pets__card_mobile-hidden">
             <img
               src="../../assets/img/pets-charly.png"
               alt="Dog Charly"
@@ -93,7 +121,9 @@
             <p class="pets__card_name">Charly</p>
             <button class="button-light">Learn more</button>
           </div>
-          <div class="pets__card">
+          <div
+            class="pets__card pets__card_tablet-hidden pets__card_mobile-hidden"
+          >
             <img
               src="../../assets/img/pets-scarlet.png"
               alt="Dog Scarlett"
@@ -102,7 +132,9 @@
             <p class="pets__card_name">Scarlett</p>
             <button class="button-light">Learn more</button>
           </div>
-          <div class="pets__card">
+          <div
+            class="pets__card pets__card_tablet-hidden pets__card_mobile-hidden"
+          >
             <img
               src="../../assets/img/pets-freddie.png"
               alt="Cat Freddie"
@@ -186,5 +218,6 @@
       </div>
       <div class="footer__img"></div>
     </footer>
+    <script src="../../js/script.js"></script>
   </body>
 </html>
