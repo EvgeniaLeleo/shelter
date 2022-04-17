@@ -9,9 +9,10 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="top center">
+    <div class="top">
       <h1 class="visually-hidden">Cozy House</h1>
-      <header class="header">
+
+      <header class="header center">
         <a class="logo-link" href="#">
           <div class="logo-container">
             <p class="logo_title">Cozy House</p>
@@ -19,15 +20,45 @@
           </div>
         </a>
 
+        <div class="shadow"></div>
+
         <nav class="menu">
-          <a class="menu__link menu__link_active" href="#">About the shelter</a>
-          <a class="menu__link" href="../pets/index.html">Our pets</a>
-          <a class="menu__link" href="#help">Help the shelter</a>
-          <a class="menu__link" href="#contacts">Contacts</a>
+          <a class="logo-link logo-link_mobile" href="#">
+            <div class="logo-container">
+              <p class="logo_title">Cozy House</p>
+              <p class="logo_subtitle">Shelter for pets in Boston</p>
+            </div>
+          </a>
+
+          <ul class="menu-list">
+            <li class="menu-link">
+              <a class="menu__link menu__link_active" href="#">
+                About the shelter
+              </a>
+            </li>
+            <li class="menu-link">
+              <a class="menu__link" href="../pets/index.html">Our pets</a>
+            </li>
+            <li class="menu-link">
+              <a class="menu__link" href="#help">Help the shelter</a>
+            </li>
+            <li class="menu-link">
+              <a class="menu__link" href="#contacts">Contacts</a>
+            </li>
+          </ul>
         </nav>
+
+        <!-- menu-mobile -->
+        <div class="btn-mobile-nav">
+          <img
+            src="../../assets/icons/burger.svg"
+            alt="menu"
+            name="menu-outline"
+          />
+        </div>
       </header>
 
-      <section class="hero">
+      <section class="hero center">
         <div class="hero__text-content">
           <h2 class="hero__title">
             Not only people need a house
@@ -37,8 +68,8 @@
             extremely wide and open heart. He or she will love you more than
             anybody else in the world, you will see!
           </p>
-          <!-- <a class="top__link" href="catalog.html">Перейти в каталог</a> -->
-          <a href="#pets" class="button">Make a friend</a>
+
+          <a href="#pets" class="button hero__button">Make a friend</a>
         </div>
         <div class="hero__img"></div>
       </section>
@@ -79,7 +110,7 @@
           Our friends who are&nbsp;looking for a house
         </h3>
         <div class="pets__content">
-          <div class="arrow">
+          <div class="arrow arrow-left">
             <img src="../../assets/icons/arrow-left.svg" alt="arrow-left" />
           </div>
 
@@ -93,16 +124,20 @@
               <p class="pets__card_name">Katrine</p>
               <button class="button-light">Learn more</button>
             </div>
-            <div class="pets__card">
+            <div class="pets__card pets__card_mobile-hidden">
               <img
                 src="../../assets/img/pets-jennifer.png"
                 alt="Dog Jennyfer"
                 class="pets__card_img"
               />
-              <p class="pets__card_name">Jennifer</p>
+              <p class="pets__card_name">
+                Jennifer
+              </p>
               <button class="button-light">Learn more</button>
             </div>
-            <div class="pets__card">
+            <div
+              class="pets__card pets__card_tablet-hidden pets__card_mobile-hidden"
+            >
               <img
                 src="../../assets/img/pets-woody.png"
                 alt="Dog Woody"
@@ -113,7 +148,7 @@
             </div>
           </div>
 
-          <div class="arrow">
+          <div class="arrow arrow-right">
             <img src="../../assets/icons/arrow-right.svg" alt="arrow-right" />
           </div>
         </div>
@@ -267,5 +302,6 @@
       </div>
       <div class="footer__img"></div>
     </footer>
+    <script src="../../js/script.js"></script>
   </body>
 </html>

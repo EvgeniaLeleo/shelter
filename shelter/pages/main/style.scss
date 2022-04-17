@@ -30,6 +30,25 @@ a {
   padding-right: calc(50% - #{$widthSite / 2});
 }
 
+.shadow {
+  opacity: 0;
+  transition: $transit;
+}
+
+.shadow_visible {
+  background-color: rgba(41, 41, 41, 0.6);
+
+  opacity: 1;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  transition: $transit;
+}
+
 // HERO SECTION & NAVIGATION
 
 .top {
@@ -59,11 +78,15 @@ a {
 
 .logo-link {
   text-decoration: none;
+
+  &_mobile {
+    display: none;
+  }
 }
 
 .logo_title {
   color: #f1cdb3;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: 'Georgia', Georgia, 'Times New Roman', Times, serif;
   font-size: 32px;
   font-weight: 400;
   line-height: 35px;
@@ -73,7 +96,7 @@ a {
 }
 
 .logo_subtitle {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Arial', Arial, Helvetica, sans-serif;
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
@@ -83,48 +106,52 @@ a {
   color: #ffffff;
 }
 
-.menu {
+.menu-list {
+  list-style: none;
+  align-items: center;
   display: flex;
   flex-wrap: wrap;
-  gap: 35px;
+  gap: 36px;
+}
 
-  &__link {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 24px;
-    letter-spacing: 0px;
-    text-align: left;
+.menu__link {
+  font-family: 'Arial', Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: left;
 
-    color: #cdcdcd;
+  padding-bottom: 2px;
+
+  color: #cdcdcd;
+  text-decoration: none;
+
+  transition: $transit;
+
+  &:hover {
+    color: #fafafa;
     text-decoration: none;
+    cursor: pointer;
+  }
 
-    transition: $transit;
+  &:active {
+    color: #fafafa;
+    border-bottom: 3px solid #f1cdb3;
+    cursor: none;
+  }
 
-    &:hover {
-      color: #fafafa;
-      text-decoration: none;
-      cursor: pointer;
-    }
-
-    &:active {
-      color: #fafafa;
-      border-bottom: 3px solid #f1cdb3;
-      cursor: none;
-    }
-
-    &_active {
-      color: #fafafa;
-      border-bottom: 3px solid #f1cdb3;
-      cursor: none;
-    }
+  &_active {
+    color: #fafafa;
+    border-bottom: 3px solid #f1cdb3;
+    cursor: none;
   }
 }
 
-// .menu-mobile {
-//   display: none;
-// }
+.btn-mobile-nav {
+  display: none;
+}
 
 .hero {
   display: flex;
@@ -137,7 +164,7 @@ a {
   }
 
   &__title {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Georgia', Georgia, 'Times New Roman', Times, serif;
     font-size: 44px;
     font-weight: 400;
     line-height: 57px;
@@ -152,7 +179,7 @@ a {
   }
 
   &__subheading {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Arial', Arial, Helvetica, sans-serif;
     font-size: 15px;
     font-style: normal;
     font-weight: 400;
@@ -177,7 +204,7 @@ a {
 .button {
   display: inline-block;
 
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: 'Georgia', Georgia, 'Times New Roman', Times, serif;
   font-size: 17px;
   font-weight: 400;
   line-height: 22px;
@@ -236,7 +263,7 @@ a {
   }
 
   &__heading {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Georgia', Georgia, 'Times New Roman', Times, serif;
     font-size: 35px;
     font-weight: 400;
     line-height: 45px;
@@ -249,7 +276,7 @@ a {
   }
 
   &__text {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Arial', Arial, Helvetica, sans-serif;
     font-size: 15px;
     font-style: normal;
     font-weight: 400;
@@ -275,7 +302,7 @@ a {
   background-color: #f6f6f6;
 
   &__heading {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Georgia', Georgia, 'Times New Roman', Times, serif;
     font-size: 35px;
     font-weight: 400;
     line-height: 45px;
@@ -313,12 +340,6 @@ a {
     }
   }
 
-  .arrow-left,
-  .arrow-right {
-    width: 14px;
-    height: 6px;
-  }
-
   &__cards-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -343,7 +364,7 @@ a {
     }
 
     &_name {
-      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-family: 'Georgia', Georgia, 'Times New Roman', Times, serif;
       font-size: 20px;
       font-weight: 400;
       line-height: 23px;
@@ -367,7 +388,7 @@ a {
   }
 
   .button-light {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Georgia', Georgia, 'Times New Roman', Times, serif;
     font-size: 17px;
     font-weight: 400;
     line-height: 22px;
@@ -400,7 +421,7 @@ a {
   background-color: #ffffff;
 
   &__heading {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Georgia', Georgia, 'Times New Roman', Times, serif;
     font-size: 35px;
     font-weight: 400;
     line-height: 45px;
@@ -430,7 +451,7 @@ a {
   }
 
   &__item-text {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Georgia', Georgia, 'Times New Roman', Times, serif;
     font-size: 20px;
     font-weight: 400;
     line-height: 23px;
@@ -473,7 +494,7 @@ a {
   }
 
   &__heading {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Georgia', Georgia, 'Times New Roman', Times, serif;
     font-size: 35px;
     font-weight: 400;
     line-height: 45.5px;
@@ -485,7 +506,7 @@ a {
   }
 
   &__subheading {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Georgia', Georgia, 'Times New Roman', Times, serif;
     font-size: 15px;
     font-weight: 400;
     line-height: 17px;
@@ -497,7 +518,7 @@ a {
 
   &__credit-card {
     display: flex;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Georgia', Georgia, 'Times New Roman', Times, serif;
     font-size: 20px;
     font-weight: 400;
     line-height: 23px;
@@ -512,6 +533,8 @@ a {
     padding: 10px 15px;
     margin-bottom: 20px;
 
+    transition: $transit;
+
     &:hover {
       background-color: #fddcc4;
       border-color: #fddcc4;
@@ -523,7 +546,7 @@ a {
   }
 
   &__card-number {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Georgia', Georgia, 'Times New Roman', Times, serif;
     font-size: 20px;
     font-weight: 400;
     line-height: 23px;
@@ -532,7 +555,7 @@ a {
   }
 
   &__text {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Arial', Arial, Helvetica, sans-serif;
     font-size: 12px;
     font-style: italic;
     font-weight: 400;
@@ -576,7 +599,7 @@ a {
   }
 
   &__header {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Georgia', Georgia, 'Times New Roman', Times, serif;
     font-size: 35px;
     font-weight: 400;
     line-height: 45px;
@@ -599,7 +622,7 @@ a {
   }
 
   &__text {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Georgia', Georgia, 'Times New Roman', Times, serif;
     font-size: 20px;
     font-weight: 400;
     line-height: 23px;
@@ -617,3 +640,6 @@ a {
     background-size: contain;
   }
 }
+
+@import 'tablet';
+@import 'mobile';
