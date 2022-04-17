@@ -8,7 +8,6 @@
 }
 
 body {
-  // font-family: sans-serif;
   background-color: #f6f6f6;
   color: #545454;
 
@@ -31,6 +30,11 @@ a {
 .center {
   padding-left: calc(50% - #{$widthSite / 2});
   padding-right: calc(50% - #{$widthSite / 2});
+}
+
+.shadow {
+  opacity: 0;
+  transition: $transit;
 }
 
 // LOGO & NAVIGATION
@@ -61,10 +65,14 @@ a {
 
 .logo-link {
   text-decoration: none;
+
+  &_mobile {
+    display: none;
+  }
 }
 
 .logo_title {
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: 'Georgia', Georgia, 'Times New Roman', Times, serif;
   font-size: 32px;
   font-weight: 400;
   line-height: 35px;
@@ -74,7 +82,7 @@ a {
 }
 
 .logo_subtitle {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Arial', Arial, Helvetica, sans-serif;
   font-size: 13px;
   font-weight: 400;
   line-height: 15px;
@@ -83,18 +91,24 @@ a {
   color: #292929;
 }
 
-.menu {
+.menu-list {
+  list-style: none;
+  align-items: center;
   display: flex;
   flex-wrap: wrap;
-  gap: 35px;
+  gap: 36px;
+}
 
+.menu {
   &__link {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Arial', Arial, Helvetica, sans-serif;
     font-size: 15px;
     font-weight: 400;
     line-height: 24px;
     letter-spacing: 0px;
     text-align: left;
+
+    padding-bottom: 2px;
 
     text-decoration: none;
 
@@ -120,6 +134,10 @@ a {
   }
 }
 
+.btn-mobile-nav {
+  display: none;
+}
+
 // PETS SECTION
 
 .section {
@@ -130,7 +148,7 @@ a {
 .button {
   display: inline-block;
 
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: 'Georgia', Georgia, 'Times New Roman', Times, serif;
   font-size: 17px;
   font-weight: 400;
   line-height: 22px;
@@ -162,7 +180,7 @@ a {
   background-color: #f6f6f6;
 
   &__heading {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Georgia', Georgia, 'Times New Roman', Times, serif;
     font-size: 35px;
     font-weight: 400;
     line-height: 45px;
@@ -199,7 +217,7 @@ a {
     }
 
     &_name {
-      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-family: 'Georgia', Georgia, 'Times New Roman', Times, serif;
       font-size: 20px;
       font-weight: 400;
       line-height: 23px;
@@ -224,7 +242,7 @@ a {
 }
 
 .button-light {
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: 'Georgia', Georgia, 'Times New Roman', Times, serif;
   font-size: 17px;
   font-weight: 400;
   line-height: 22px;
@@ -251,7 +269,7 @@ a {
     justify-content: center;
     align-items: center;
 
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Georgia', Georgia, 'Times New Roman', Times, serif;
     font-size: 20px;
     font-weight: 400;
     line-height: 23px;
@@ -331,7 +349,7 @@ a {
   }
 
   &__header {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Georgia', Georgia, 'Times New Roman', Times, serif;
     font-size: 35px;
     font-weight: 400;
     line-height: 45px;
@@ -354,7 +372,7 @@ a {
   }
 
   &__text {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Georgia', Georgia, 'Times New Roman', Times, serif;
     font-size: 20px;
     font-weight: 400;
     line-height: 23px;
@@ -372,3 +390,6 @@ a {
     background-size: contain;
   }
 }
+
+@import 'tablet';
+@import 'mobile';
