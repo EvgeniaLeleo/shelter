@@ -1,0 +1,241 @@
+@media (max-width: 767.9px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .center {
+    padding-left: calc(50% - 150px); //(320 - 10 * 2) / 2
+    padding-right: calc(50% - 150px);
+  }
+
+  // HERO SECTION & NAVIGATION
+
+  .top {
+    min-height: 823px;
+  }
+
+  .header {
+    gap: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .logo-container {
+    margin-left: 10px;
+  }
+
+  .btn-mobile-nav {
+    display: block;
+
+    margin-right: 53px;
+
+    z-index: 2;
+    cursor: pointer;
+
+    transition: $transit;
+  }
+
+  @keyframes slide-in {
+    from {
+      margin-left: 100%;
+    }
+
+    to {
+      left: calc(50% - 160px);
+    }
+  }
+
+  // @keyframes slide-out {
+  //   from {
+  //     left: calc(50% - 160px);
+  //   }
+
+  //   to {
+  //     margin-left: 100%;
+  //   }
+  // }
+
+  .menu {
+    background-color: #ffffff;
+
+    position: absolute;
+    top: 0;
+    left: 100%;
+    z-index: 1;
+
+    width: 320px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    transition: $transit; // all 0.1s ease-in;
+
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    min-height: 100vh;
+
+    // animation-duration: 0.1s;
+    // animation-name: slide-in;
+    // display: none;
+  }
+
+  .nav-open .menu {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(-100%);
+  }
+
+  // .nav-open .slide-out {
+  //   animation-duration: 3s;
+  //   animation-name: slide-out;
+  // }
+
+  .nav-open .btn-mobile-nav {
+    transition: $transit;
+    transform: rotate(90deg);
+  }
+
+  .nav-open .shadow {
+    background-color: rgba(41, 41, 41, 0.6);
+
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
+
+    opacity: 1;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    transition: $transit;
+  }
+
+  .logo-link {
+    &_mobile {
+      display: block;
+
+      position: absolute;
+      top: 30px;
+      left: 10px;
+    }
+  }
+
+  .menu-list {
+    flex-direction: column;
+    gap: 42px;
+
+    // margin-top: 248px;
+    // margin-bottom: 244px;
+  }
+
+  .menu__link {
+    font-family: 'Arial', Arial, Helvetica, sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 51px;
+    letter-spacing: 0px;
+    text-align: left;
+
+    padding-bottom: 7px;
+  }
+
+  .section {
+    padding-top: 42px;
+    padding-bottom: 42px;
+  }
+
+  // PETS SECTION
+
+  .pets {
+    &__heading {
+      font-family: 'Georgia', Georgia, 'Times New Roman', Times, serif;
+      font-size: 25px;
+      font-weight: 400;
+      line-height: 32px;
+      letter-spacing: 0.06em;
+      text-align: center;
+
+      max-width: 100%;
+      margin-bottom: 42px;
+    }
+
+    &__card {
+      &_mobile-hidden {
+        display: none;
+      }
+    }
+
+    &__cards-container {
+      grid-template-columns: 1fr;
+      gap: 30px;
+
+      grid-column: 1/-1;
+      grid-row: 1/-1;
+
+      width: 270px;
+
+      padding-left: 0;
+      padding-right: 0;
+      margin-bottom: 42px;
+    }
+
+    .pagination {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      gap: 0;
+    }
+  }
+
+  // FOOTER
+
+  .footer {
+    align-items: center;
+
+    min-height: 809px;
+
+    &__info {
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+
+      padding-left: 0;
+      padding-right: 0;
+
+      padding-bottom: 40px;
+    }
+
+    &__contacts {
+      align-items: center;
+
+      height: 208px;
+    }
+
+    &__address {
+      width: 100%;
+      height: 222px;
+    }
+
+    &__header {
+      font-family: 'Georgia', Georgia, 'Times New Roman', Times, serif;
+      font-size: 25px;
+      font-weight: 400;
+      line-height: 32px;
+      letter-spacing: 0.06em;
+      text-align: center;
+      align-self: center;
+
+      width: 250px;
+    }
+
+    &__img {
+      width: 260px;
+      height: 269px;
+    }
+  }
+}

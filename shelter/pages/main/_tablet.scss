@@ -1,0 +1,187 @@
+@media (max-width: 1279.9px) {
+  .center {
+    padding-left: calc(50% - 354px); //(768 - 30 * 2) / 2
+    padding-right: calc(50% - 354px);
+  }
+
+  // HERO SECTION & NAVIGATION
+
+  .top {
+    min-height: 1165px;
+    padding-top: 30px;
+  }
+
+  .header {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .hero {
+    flex-direction: column;
+    gap: 0;
+    margin-bottom: 0;
+
+    &__text-content {
+      display: flex;
+      flex-direction: column;
+
+      max-width: 100%;
+      padding-left: 124px;
+      padding-right: 124px;
+      padding-bottom: 0;
+    }
+
+    &__title {
+      margin-top: 0;
+      margin-bottom: 42px;
+    }
+
+    &__button {
+      text-align: center;
+
+      margin: 0 auto;
+      margin-bottom: 100px;
+    }
+
+    &__img {
+      height: 592px;
+      width: auto;
+
+      background-position: right bottom;
+    }
+  }
+
+  // ABOUT SECTION
+
+  .about {
+    &__content {
+      flex-direction: column-reverse;
+      gap: 0;
+
+      padding-right: 139px;
+      padding-left: 139px;
+    }
+
+    &__img-container {
+      display: flex;
+
+      width: 100%;
+    }
+
+    &__img {
+      object-fit: contain;
+      margin: 0 auto;
+    }
+
+    &__text-content {
+      display: flex;
+      flex-direction: column;
+
+      width: 100%;
+      padding: 0;
+      margin-bottom: 80px;
+    }
+
+    &__heading {
+      max-width: 370px;
+      margin-top: 0;
+    }
+  }
+
+  // PETS SECTION
+
+  .pets {
+    &__cards-container {
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+
+      padding: 0 12px;
+      width: auto;
+    }
+
+    &__card {
+      &_tablet-hidden {
+        display: none;
+      }
+    }
+  }
+
+  // HOW YOU CAN HELP SECTION
+
+  .help {
+    &__content {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+
+      margin: 0 39px;
+      column-gap: 64px;
+    }
+
+    &__item {
+      min-width: 60px;
+      width: 100%;
+    }
+  }
+
+  // DONATION SECTION
+
+  .donation {
+    &__content {
+      flex-direction: column-reverse;
+      gap: 0;
+    }
+
+    &__img-container {
+      justify-content: center;
+      align-items: center;
+
+      width: 100%;
+    }
+
+    &__img {
+      max-width: 100%;
+    }
+
+    &__text-content {
+      width: 380px;
+      padding-right: 0;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 60px;
+    }
+  }
+
+  // FOOTER
+
+  .footer {
+    flex-direction: column;
+
+    min-height: 639px;
+    padding-top: 30px;
+
+    &__info {
+      gap: 44px;
+      width: 100%;
+
+      padding-left: 34px;
+      padding-right: 34px;
+    }
+
+    &__contacts,
+    &__address {
+      width: auto;
+      height: 234px;
+    }
+
+    &__header {
+      text-align: left;
+
+      margin-top: 0;
+    }
+
+    &__img {
+      width: 100%;
+      height: 310px;
+    }
+  }
+}
