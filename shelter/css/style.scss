@@ -81,7 +81,7 @@ a {
   min-height: 908px;
   padding-top: 60px;
 
-  background: url('../../assets/img/noise_transparent@2x.png'), $bgcolor;
+  background: url('../assets/img/noise_transparent@2x.png'), $bgcolor;
   background-repeat: repeat;
 }
 
@@ -218,7 +218,7 @@ a {
 
   &__img {
     width: 100%;
-    background-image: url('../../assets/img/start-screen-puppy.png');
+    background-image: url('../assets/img/start-screen-puppy.png');
     background-repeat: no-repeat;
     background-position: center bottom;
     background-size: contain;
@@ -669,7 +669,7 @@ a {
   min-height: 350px;
   padding-top: 40px;
 
-  background: url('../../assets/img/noise_transparent@2x.png'), $bgcolorfooter;
+  background: url('../assets/img/noise_transparent@2x.png'), $bgcolorfooter;
   background-repeat: repeat;
 
   &__info {
@@ -726,7 +726,7 @@ a {
 
   &__img {
     width: 25%;
-    background-image: url('../../assets/img/footer-puppy.png');
+    background-image: url('../assets/img/footer-puppy.png');
     background-repeat: no-repeat;
     background-position: center bottom;
     background-size: contain;
