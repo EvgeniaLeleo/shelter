@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shelter</title>
-    <link rel="stylesheet" href="../normalize.css" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../../css/normalize.css" />
+    <link rel="stylesheet" href="../../css/style.css" />
   </head>
   <body>
     <div class="top">
@@ -32,9 +32,9 @@
 
           <ul class="menu-list">
             <li class="menu-link">
-              <a class="menu__link menu__link_active" href="#">
+              <p class="menu__link menu__link_active">
                 About the shelter
-              </a>
+              </p>
             </li>
             <li class="menu-link">
               <a class="menu__link" href="../pets/index.html">Our pets</a>
@@ -114,37 +114,25 @@
             <img src="../../assets/icons/arrow-left.svg" alt="arrow-left" />
           </div>
 
-          <div class="pets__cards-container">
-            <div class="pets__card">
-              <img
-                src="../../assets/img/pets-katrine.png"
-                alt="Cat Katrine"
-                class="pets__card_img"
-              />
-              <p class="pets__card_name">Katrine</p>
-              <button class="button-light">Learn more</button>
-            </div>
-            <div class="pets__card pets__card_mobile-hidden">
-              <img
-                src="../../assets/img/pets-jennifer.png"
-                alt="Dog Jennyfer"
-                class="pets__card_img"
-              />
-              <p class="pets__card_name">
-                Jennifer
-              </p>
-              <button class="button-light">Learn more</button>
-            </div>
-            <div
-              class="pets__card pets__card_tablet-hidden pets__card_mobile-hidden"
-            >
-              <img
-                src="../../assets/img/pets-woody.png"
-                alt="Dog Woody"
-                class="pets__card_img"
-              />
-              <p class="pets__card_name">Woody</p>
-              <button class="button-light">Learn more</button>
+          <div class="slide-container">
+            <div class="pets__cards-container pets__cards-container-current">
+              <div class="pets__card">
+                <img src=" " alt=" " class="pets__card_img" />
+                <p class="pets__card_name"></p>
+                <button class="button-light">Learn more</button>
+              </div>
+              <div class="pets__card pets__card_mobile-hidden">
+                <img src=" " alt=" " class="pets__card_img" />
+                <p class="pets__card_name"></p>
+                <button class="button-light">Learn more</button>
+              </div>
+              <div
+                class="pets__card pets__card_tablet-hidden pets__card_mobile-hidden"
+              >
+                <img src=" " alt=" " class="pets__card_img" />
+                <p class="pets__card_name"></p>
+                <button class="button-light">Learn more</button>
+              </div>
             </div>
           </div>
 
@@ -303,5 +291,11 @@
       <div class="footer__img"></div>
     </footer>
     <script src="../../js/script.js"></script>
+    <script src="../../js/request.js"></script>
+    <script src="../../js/popup.js"></script>
+    <script src="../../js/random.js"></script>
+    <script src="../../js/generate-new-slide.js"></script>
+    <script src="../../js/generate-cards-content.js"></script>
+    <script src="../../js/slide-animation.js"></script>
   </body>
 </html>
