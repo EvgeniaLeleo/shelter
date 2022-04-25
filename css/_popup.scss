@@ -1,0 +1,218 @@
+@keyframes zoom {
+  from {
+    transform: translate(-50%, -50%) scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+
+.popup {
+  position: fixed;
+  z-index: 4;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+
+  width: 900px;
+  min-height: 500px;
+
+  border-radius: 9px;
+
+  background-color: #fafafa;
+  animation-name: zoom;
+  animation-duration: 0.15s;
+
+  &__close {
+    position: absolute;
+    right: -42px;
+    top: -52px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 2px solid #f1cdb3;
+    border-radius: 50%;
+
+    width: 52px;
+    height: 52px;
+    transition: $transit;
+  }
+
+  &__img {
+    height: auto;
+    width: 500px;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    border-top-left-radius: 9px;
+    border-bottom-left-radius: 9px;
+  }
+
+  &__text-content {
+    display: flex;
+    flex-direction: column;
+
+    width: 350px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-left: 30px;
+    margin-right: 20px;
+  }
+
+  &__heading {
+    font-family: 'Georgia', Georgia, 'Times New Roman', Times, serif;
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 45px;
+    letter-spacing: 0.06em;
+    text-align: left;
+
+    margin-bottom: 10px;
+  }
+
+  &__subheading {
+    font-family: 'Georgia', Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: 0.06em;
+    text-align: left;
+
+    margin-bottom: 40px;
+  }
+
+  &__text {
+    font-family: 'Georgia', Georgia, 'Times New Roman', Times, serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0.06em;
+    text-align: left;
+
+    margin-bottom: 40px;
+  }
+
+  &__details {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 11px;
+  }
+
+  &__detail {
+    font-family: 'Georgia', Georgia, 'Times New Roman', Times, serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0.06em;
+    text-align: left;
+
+    display: flex;
+    justify-content: start;
+    align-items: flex-start;
+
+    // margin-bottom: 11px;
+
+    & strong {
+      margin-right: 5px;
+    }
+  }
+}
+
+.dot {
+  margin-right: 10px;
+  margin-top: 6px;
+}
+
+@media (max-width: 1279px) {
+  .popup {
+    width: 630px;
+    min-height: 350px;
+
+    &__img {
+      height: auto;
+      width: 350px;
+    }
+
+    &__text-content {
+      width: 262px;
+
+      padding-top: 10px;
+      padding-bottom: 30px;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+    &__subheading {
+      margin-bottom: 20px;
+    }
+
+    &__text {
+      font-size: 13px;
+      line-height: 14px;
+
+      margin-bottom: 20px;
+    }
+
+    // &__detail {
+    //   margin-bottom: 6px;
+    // }
+    &__details {
+      gap: 6px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .popup {
+    width: 240px;
+    min-height: 341px;
+
+    &__close {
+      right: -30px;
+    }
+
+    &__img {
+      display: none;
+    }
+
+    &__text-content {
+      align-items: center;
+
+      width: 220px;
+
+      padding-bottom: 10px;
+    }
+
+    &__subheading {
+      text-align: center;
+    }
+
+    &__text {
+      text-align: justify;
+
+      margin-bottom: 24px;
+    }
+
+    &__details {
+      align-self: start;
+    }
+
+    &__detail {
+      & :last-child {
+        word-break: break-all;
+        // -moz-hyphens: auto;
+        // -webkit-hyphens: auto;
+        // -ms-hyphens: auto;
+      }
+    }
+  }
+}
