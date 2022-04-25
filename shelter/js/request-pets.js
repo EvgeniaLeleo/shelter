@@ -5,7 +5,7 @@
 function requestFunction() {
   const request = new XMLHttpRequest();
 
-  request.open('GET', '../../../assets/pets.json');
+  request.open('GET', '../../assets/pets.json');
 
   request.send();
 
