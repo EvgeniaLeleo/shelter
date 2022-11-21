@@ -2,22 +2,15 @@
 @import 'typography';
 @import 'popup';
 
-/*
+/* 
+z-index:
 
-.pets__card-container-current {
-  z-index: 0;
-}
-.menu {
-  z-index: 2;
-}
-.btn-mobile-nav {
-  z-index: 3;
-}
-.shadow {
-  z-index: 1;
-}
-.popup {
-  z-index: 4;
+.pets__card-container-current: 0
+.menu: 2
+.btn-mobile-nav: 3
+.shadow: 1
+.popup: 4
+
 */
 
 * {
@@ -25,10 +18,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-// html {
-//   margin-left: calc(100vw - 100%);
-//   margin-right: 0;
-// }
 
 body {
   color: #545454;
@@ -56,8 +45,6 @@ a {
   opacity: 0;
 
   z-index: 1;
-
-  // transition: $transit;
 }
 
 .shadow_visible {
@@ -71,8 +58,6 @@ a {
   left: 0;
   right: 0;
   bottom: 0;
-
-  // transition: $transit;
 }
 
 // HERO SECTION & NAVIGATION

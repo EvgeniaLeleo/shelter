@@ -53,10 +53,10 @@ function showData(data) {
   generateCardsContent(
     app.numberOfCardsOnPage,
     dataPets[app.pageNumber],
-    petsCards
+    petsCards,
   ); //рандомно заполняем карточки 1 страницы petsCards
 
-  arrowPagination(dataPets); //добавляем функционал слайдеру
+  arrowPagination(dataPets); //функционал слайдера
 }
 
 /**
@@ -187,7 +187,7 @@ function newSlideFromRight(data) {
   generateCardsContent(
     app.numberOfCardsOnPage,
     data[app.pageNumber],
-    petsCardsNew
+    petsCardsNew,
   );
 
   const nextSlide = document.querySelector('.pets__cards-container-new');
@@ -209,7 +209,7 @@ function newSlideFromLeft(data) {
   generateCardsContent(
     app.numberOfCardsOnPage,
     data[app.pageNumber],
-    petsCardsNew
+    petsCardsNew,
   );
 
   const prevSlide = document.querySelector('.pets__cards-container-new');

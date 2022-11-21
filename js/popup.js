@@ -2,10 +2,6 @@
  * Popup
  */
 
-/**
- * Попап - это отдельный элемент, который всплывает поверх страницы при нажатии на любое место элемента (блока) с описанием конкретного питомца, и центрируется. Остальная часть страницы затемняется.
- */
-
 const popupCloseBtn = document.createElement('div');
 const popupImg = document.createElement('div');
 const popupTextContent = document.createElement('div');
@@ -51,13 +47,13 @@ function showPopup({
   popupText.textContent = description;
   popupAge.innerHTML = `<img class="dot" src="../../assets/icons/dot.svg" alt="dot"><strong>Age:</strong>${age}`;
   popupInoculation.innerHTML = `<img class="dot" src="../../assets/icons/dot.svg" alt="dot"><strong>Inoculations:</strong><span>${inoculations.join(
-    ', '
+    ', ',
   )}</span>`;
   popupDisease.innerHTML = `<img class="dot" src="../../assets/icons/dot.svg" alt="dot"><strong>Diseases:</strong><span>${diseases.join(
-    ', '
+    ', ',
   )}</span>`;
   popupParasites.innerHTML = `<img class="dot" src="../../assets/icons/dot.svg" alt="dot"><strong>Parasites:</strong><span>${parasites.join(
-    ', '
+    ', ',
   )}</span>`;
 
   document.body.appendChild(popup);
