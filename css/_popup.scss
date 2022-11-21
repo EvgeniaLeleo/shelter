@@ -162,9 +162,6 @@
       margin-bottom: 20px;
     }
 
-    // &__detail {
-    //   margin-bottom: 6px;
-    // }
     &__details {
       gap: 6px;
     }
@@ -209,9 +206,6 @@
     &__detail {
       & :last-child {
         word-break: break-all;
-        // -moz-hyphens: auto;
-        // -webkit-hyphens: auto;
-        // -ms-hyphens: auto;
       }
     }
   }
