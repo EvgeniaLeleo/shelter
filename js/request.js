@@ -1,6 +1,7 @@
 /***
  * Запрос данных из файла pets.json и вывод их на текущую страницу в карточки
  */
+
 function requestFunction() {
   const request = new XMLHttpRequest();
 
@@ -43,7 +44,7 @@ function arrowSlider(data) {
 
   arrowRight.addEventListener('click', () => {
     const currentSlide = document.querySelector(
-      '.pets__cards-container-current'
+      '.pets__cards-container-current',
     );
 
     hideSlide(currentSlide, 'to-left');
@@ -69,7 +70,7 @@ function arrowSlider(data) {
 
   arrowLeft.addEventListener('click', () => {
     const currentSlide = document.querySelector(
-      '.pets__cards-container-current'
+      '.pets__cards-container-current',
     );
     hideSlide(currentSlide, 'to-right');
 
