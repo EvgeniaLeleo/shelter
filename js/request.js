@@ -25,14 +25,14 @@ function requestFunction() {
  */
 
 function showData(data) {
-  generateCardsContent(petsCards.length, data, petsCards); //заполняем карточки petsCards
+  generateCardsContent(petsCards.length, data, petsCards); //заполняет карточки petsCards
 
   // запись текущих данных в глобальный объект
   for (let i = 0; i < petsCards.length; i++) {
     app.currentCardsData[i] = data[i];
   }
 
-  arrowSlider(data); //добавляем функционал слайдеру
+  arrowSlider(data); //добавляет функционал слайдеру
 }
 
 /**

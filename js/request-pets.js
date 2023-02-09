@@ -25,7 +25,7 @@ function requestFunction() {
  */
 
 function showData(data) {
-  let sixData = sixTimesArr(data); // увеличиваем исходный массив
+  let sixData = sixTimesArr(data); // увеличивает исходный массив
 
   app.numberOfCardsOnPage = 8;
   app.numberOfPages = sixData.length / app.numberOfCardsOnPage;
@@ -54,7 +54,7 @@ function showData(data) {
     app.numberOfCardsOnPage,
     dataPets[app.pageNumber],
     petsCards,
-  ); //рандомно заполняем карточки 1 страницы petsCards
+  ); //рандомно заполняет карточки 1 страницы petsCards
 
   arrowPagination(dataPets); //функционал слайдера
 }
@@ -78,7 +78,7 @@ function arrowPagination(data) {
   arrowNext.addEventListener('click', callNext);
   arrowLast.addEventListener('click', callLast);
 
-  // Включаем кнопки Назад
+  // Включает кнопки Назад
 
   if (app.pageNumber > 0) {
     arrowPrev.addEventListener('click', callPrev);
@@ -94,7 +94,7 @@ function arrowPagination(data) {
 
     newSlideFromRight(data);
 
-    // доходим до конца и кнопка перестает работать
+    // доходит до конца и кнопка перестает работать
     if (app.pageNumber === app.numberOfPages - 1) {
       arrowNext.classList.add('inactive');
       arrowNext.removeEventListener('click', callNext);

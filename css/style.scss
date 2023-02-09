@@ -6,9 +6,9 @@
 z-index:
 
 .pets__card-container-current: 0
+.shadow: 1
 .menu: 2
 .btn-mobile-nav: 3
-.shadow: 1
 .popup: 4
 
 */
@@ -390,7 +390,10 @@ a {
     transition: $transit;
 
     &_img {
+      display: block;
       width: 100%;
+      height: auto;
+      aspect-ratio: 1/1;
       margin-bottom: 30px;
       border-top-left-radius: 9px;
       border-top-right-radius: 9px;

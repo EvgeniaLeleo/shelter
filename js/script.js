@@ -23,7 +23,7 @@ const shadow = document.querySelector('.shadow');
 
 function scrollToggle() {
   const currentWidth = document.documentElement.clientWidth; // ширина за вычетом прокрутки
-  const windowWidth = window.innerWidth; // вся полная ширина окна
+  const windowWidth = window.innerWidth; // полная ширина окна
   const paddingScroll = windowWidth - currentWidth;
 
   if (document.body.style.overflow === 'hidden') {
@@ -77,7 +77,7 @@ navLinks.forEach((navLink) =>
 
       scrollToggle();
     }
-  })
+  }),
 );
 
 /**
