@@ -1,5 +1,5 @@
 /***
- * Запрос данных из файла pets.json и вывод их на текущую страницу в карточки
+ * Requesting data from the pets file.json and output them to the current page in the cards
  */
 
 function requestFunction() {
@@ -21,22 +21,21 @@ function requestFunction() {
 }
 
 /***
- * Вывод данных data из файла *.json в карточки и popup
+ * Data output from the * file.json to cards and popup
  */
 
 function showData(data) {
-  generateCardsContent(petsCards.length, data, petsCards); //заполняем карточки petsCards
+  generateCardsContent(petsCards.length, data, petsCards); // fills petsCards
 
-  // запись текущих данных в глобальный объект
   for (let i = 0; i < petsCards.length; i++) {
     app.currentCardsData[i] = data[i];
   }
 
-  arrowSlider(data); //добавляем функционал слайдеру
+  arrowSlider(data); // slider
 }
 
 /**
- * Функционал стрелок для слайдера с рандомным наполнением
+ * The functionality of the slider arrows with random data
  */
 
 function arrowSlider(data) {
@@ -60,7 +59,6 @@ function arrowSlider(data) {
     const nextSlide = document.querySelector('.pets__cards-container-new');
     showSlide(nextSlide, 'from-right');
 
-    // запись текущих данных в глобальный объект
     for (let i = 0; i < petsCards.length; i++) {
       app.currentCardsData[i] = newArr[i];
     }
@@ -85,7 +83,6 @@ function arrowSlider(data) {
     const nextSlide = document.querySelector('.pets__cards-container-new');
     showSlide(nextSlide, 'from-left');
 
-    // запись текущих данных в глобальный объект
     for (let i = 0; i < petsCards.length; i++) {
       app.currentCardsData[i] = newArr[i];
     }

@@ -1,5 +1,5 @@
 /**
- * Заполнение n карточек слайда данными из массива data
+ * Filling n slide cards with data from the data array
  */
 
 function generateCardsContent(n, data, container) {
@@ -9,13 +9,13 @@ function generateCardsContent(n, data, container) {
     img.setAttribute('src', data[i].img);
     img.setAttribute(
       'alt',
-      `${data[i].name}: ${data[i].type} - ${data[i].breed}`
+      `${data[i].name}: ${data[i].type} - ${data[i].breed}`,
     );
 
     let name = container[i].querySelector('.pets__card_name');
     name.textContent = data[i].name;
 
-    // Вывод данных data из файла *.json в popup
+    // Data output from the * file.json in popup
     container[i].addEventListener('click', () => {
       shadow.classList.add('shadow_visible');
 

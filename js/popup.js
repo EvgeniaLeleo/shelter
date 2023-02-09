@@ -79,7 +79,7 @@ function hidePopup() {
 }
 
 /**
- * При нажатии вне границ попапа, на затемненную область, или на кнопку с крестиком, попап и затемнение должны исчезнуть.
+ * When clicking outside the boundaries of the popup, on the darkened area, or on the button with a cross, the popup and the blackout disappear
  */
 
 popupCloseBtn.addEventListener('click', () => {
@@ -89,10 +89,10 @@ popupCloseBtn.addEventListener('click', () => {
 
 shadow.addEventListener('click', () => {
   hidePopup();
-}); //исчезновение прописано в script.js
+}); //see script.js
 
 /**
- * При наведении мышкой на затемненную область или кнопку с крестиком, т.е. при событии hover, кнопка должна получить эффект наведения. Другими словами: кнопка интерактивная. При этом при наведении на окно (блок) самого попапа ничего не происходит.
+ * When hovering the cursor over a darkened area or a button with a cross, i.e. when the hover event occurs, the button gets a hover effect. When hovering over the window (block) of the pop-up, nothing happens
  */
 
 shadow.addEventListener('mouseover', () => {
@@ -117,7 +117,7 @@ popupCloseBtn.addEventListener('mouseout', () => {
 });
 
 /**
- * При наведении мышкой на окно (блок) самого попапа ничего не происходит.
+ * When hovering the cursor over the window (block) of the popup, nothing happens.
  */
 
 popupImg.addEventListener('mouseover', () => {
