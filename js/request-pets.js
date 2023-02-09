@@ -1,5 +1,5 @@
 /***
- * Запрос данных из файла pets.json и вывод их на текущую страницу в карточки
+ * Requesting data from the pets file.json and output them to the current page in the cards
  */
 
 function requestFunction() {
@@ -21,11 +21,11 @@ function requestFunction() {
 }
 
 /***
- * Вывод данных data из файла *.json в карточки и popup
+ * Data output from the * file.json to flashcards and popup
  */
 
 function showData(data) {
-  let sixData = sixTimesArr(data); // увеличивает исходный массив
+  let sixData = sixTimesArr(data);
 
   app.numberOfCardsOnPage = 8;
   app.numberOfPages = sixData.length / app.numberOfCardsOnPage;
@@ -41,7 +41,7 @@ function showData(data) {
   }
 
   /**
-   * Генерация numberOfPages страниц по numberOfCardsOnPage рандомных элементов
+   * Generation of numberOfPages of pages by numberOfCardsOnPage random elements
    */
 
   const dataPets = [];
@@ -54,13 +54,13 @@ function showData(data) {
     app.numberOfCardsOnPage,
     dataPets[app.pageNumber],
     petsCards,
-  ); //рандомно заполняет карточки 1 страницы petsCards
+  ); // randomly fills the cards of the first page of petsCards
 
-  arrowPagination(dataPets); //функционал слайдера
+  arrowPagination(dataPets); // slider
 }
 
 /**
- * Функционал стрелок для слайдера
+ * The functionality of the slider arrows
  */
 
 const arrowFirst = document.querySelector('.pagination__button_first');
@@ -78,7 +78,7 @@ function arrowPagination(data) {
   arrowNext.addEventListener('click', callNext);
   arrowLast.addEventListener('click', callLast);
 
-  // Включает кнопки Назад
+  // activates the Back buttons
 
   if (app.pageNumber > 0) {
     arrowPrev.addEventListener('click', callPrev);
@@ -90,11 +90,11 @@ function arrowPagination(data) {
   function showNextSlide(data) {
     app.pageNumber++;
 
-    buttonCurrentPage.textContent = app.pageNumber + 1; // смена номера страницы на кнопке
+    buttonCurrentPage.textContent = app.pageNumber + 1; // changing the page number on the button
 
     newSlideFromRight(data);
 
-    // доходит до конца и кнопка перестает работать
+    // when reaches the end, the button turns off
     if (app.pageNumber === app.numberOfPages - 1) {
       arrowNext.classList.add('inactive');
       arrowNext.removeEventListener('click', callNext);
@@ -124,7 +124,7 @@ function arrowPagination(data) {
       arrowLast.addEventListener('click', callLast);
     }
 
-    // доходим до начала и кнопка перестает работать
+    // when reaches the beginning, the button turns off
     if (app.pageNumber === 0) {
       arrowPrev.classList.add('inactive');
       arrowPrev.removeEventListener('click', callPrev);
@@ -140,7 +140,7 @@ function arrowPagination(data) {
 
     newSlideFromRight(data);
 
-    // кнопка вперед перестает работать
+    // button Forward turns off
     arrowNext.classList.add('inactive');
     arrowNext.removeEventListener('click', callNext);
     arrowLast.classList.add('inactive');
@@ -163,7 +163,7 @@ function arrowPagination(data) {
     arrowLast.classList.remove('inactive');
     arrowLast.addEventListener('click', callLast);
 
-    // доходим до начала и кнопка перестает работать
+    // when reaches the beginning, the button turns off
     arrowPrev.classList.add('inactive');
     arrowPrev.removeEventListener('click', callPrev);
     arrowFirst.classList.add('inactive');
@@ -172,7 +172,7 @@ function arrowPagination(data) {
 }
 
 /**
- * Генерация и смена слайдов справа налево
+ * Generating and changing slides from right to left
  */
 
 function newSlideFromRight(data) {
@@ -195,7 +195,7 @@ function newSlideFromRight(data) {
 }
 
 /**
- * Генерация и смена слайдов слева направо
+ * Generating and changing slides from left to right
  */
 
 function newSlideFromLeft(data) {

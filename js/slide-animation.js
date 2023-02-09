@@ -1,5 +1,5 @@
 /**
- * Анимация слайдов
+ * Slide animation
  */
 
 function hideSlide(slide, direction) {
@@ -7,7 +7,7 @@ function hideSlide(slide, direction) {
 
   slide.addEventListener('animationend', function () {
     const current = document.body.querySelector(
-      '.pets__cards-container-current'
+      '.pets__cards-container-current',
     );
 
     slideContainer.removeChild(current);

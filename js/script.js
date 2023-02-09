@@ -1,5 +1,5 @@
 /**
- * Генерация карточек
+ * Generating cards
  */
 document.addEventListener('DOMContentLoaded', () => {
   requestFunction();
@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
 const app = { currentCardsData: [], pageNumber: 0 };
 
 /**
- * Бургер-меню
+ * Burger-menu
  */
 const btnNavElement = document.querySelector('.btn-mobile-nav');
 const menu = document.querySelector('.menu');
@@ -18,12 +18,12 @@ const navLinks = document.querySelectorAll('.menu-link');
 const shadow = document.querySelector('.shadow');
 
 /**
- * Включение и отключение скролла
+ * Enabling and disabling scrolling
  */
 
 function scrollToggle() {
-  const currentWidth = document.documentElement.clientWidth; // ширина за вычетом прокрутки
-  const windowWidth = window.innerWidth; // полная ширина окна
+  const currentWidth = document.documentElement.clientWidth; // width minus scrolling
+  const windowWidth = window.innerWidth; // full width of the window
   const paddingScroll = windowWidth - currentWidth;
 
   if (document.body.style.overflow === 'hidden') {
@@ -41,7 +41,7 @@ function scrollToggle() {
 }
 
 /**
- * Появление и исчезновение бургер-меню и тени при клике по бургеру
+ * Appearance and disappearance of the burger menu and shadows when clicking on the burger
  */
 
 btnNavElement.addEventListener('click', () => {
@@ -53,7 +53,7 @@ btnNavElement.addEventListener('click', () => {
 });
 
 /**
- * Появление и исчезновение бургер-меню и тени при клике по логотипу в меню
+ * Appearance and disappearance of the burger menu and shadows when clicking on the logo in the menu
  */
 
 logoLinkMobile.addEventListener('click', () => {
@@ -65,7 +65,7 @@ logoLinkMobile.addEventListener('click', () => {
 });
 
 /**
- * Появление и исчезновение бургер-меню и тени при клике по ссылкам в меню
+ * Appearance and disappearance of the burger menu and shadows when clicking on links in the menu
  */
 
 navLinks.forEach((navLink) =>
@@ -81,7 +81,7 @@ navLinks.forEach((navLink) =>
 );
 
 /**
- * Появление и исчезновение бургер-меню и тени при клике по тени
+ * Appearance and disappearance of the burger menu and shadow when clicking on the shadow
  */
 
 shadow.addEventListener('click', () => {
@@ -91,14 +91,14 @@ shadow.addEventListener('click', () => {
 });
 
 /**
- * Появление попапа при нажатии на карточку питомца
+ * Pop-up appearance when clicking on the pet card
  */
 
 const petsCards = document.querySelectorAll('.pets__card');
 const popup = document.createElement('div');
 
 /**
- * Перемотка страницы в начальное положение
+ * Rewind the page to the starting position
  */
 const activeLink = document.querySelector('.menu__link_active');
 activeLink.addEventListener('click', () => {

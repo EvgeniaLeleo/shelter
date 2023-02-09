@@ -1,5 +1,5 @@
 /**
- * Генерация n случайных элементов массива arr, не совпадающих с элементами app.currentCardsData
+ * Generating n random elements of the array that do not match the app.currentCardsData elements
  */
 
 function arrayRandElement(arr, n = 3) {
