@@ -1,6 +1,7 @@
 # Сайт для приюта домашних животных Cozy House
 
 Demo: https://evgenialeleo.github.io/shelter/pages/main/
+
 Лендинг для приюта домашних животных
 
 <img width="482" alt="image" src="https://user-images.githubusercontent.com/88904845/217924205-be7eb741-323c-4e79-b243-55baf5d077aa.png">
